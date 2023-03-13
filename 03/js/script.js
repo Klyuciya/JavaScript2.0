@@ -16,10 +16,10 @@ const input = document.querySelector('.age');
 // () => стрелочная функция
 button.onclick = () => {
     let num = +input.value;
-    if (num >= 16 && num < 60) {
+    if (num >= 16 && num < 39) {
         console.log ("Welcome!!!");
     }
-    else if (num > 60) { 
+    else if (num > 39) { 
         console.log(" Ты точно сюда? ");
     }
     else {
