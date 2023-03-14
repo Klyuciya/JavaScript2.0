@@ -122,3 +122,26 @@ b7.onclick = () => {
     let n72 = i72.value;
 document.querySelector('.out-7').innerHTML = Math.pow(n71,n72)
 }
+
+// Task 8.
+
+// Дан select s-8, который содержит 3 значения: 1, 2, 3. Дана кнопка b-8. При ее нажатии срабатывает функция f8. Функция должна получить выбранное в select число, потом с помощью switch case сравнить его поочередно с ‘1’, ‘2’, ‘3’. И если число выбрано - 1, то вывести в out-8 строку one, если 2 - two, если 3 - three.
+
+const b8 = document.querySelector('.b-8');
+const s8 = document.querySelector('.s-8');
+b8.onclick = () => {
+    let x = 0;
+    let n8=+s8.value;
+    switch(n8) {
+        case 1: 
+            document.querySelector('.out-8').innerHTML = 1;
+            break;
+        case 2: 
+            document.querySelector('.out-8').innerHTML = 2;
+            break;
+        case 3: 
+            document.querySelector('.out-8').innerHTML = 3
+            break;
+    }
+}
+
