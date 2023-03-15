@@ -64,9 +64,63 @@
         </select>
         <button class="b-8"> ok </button>
         <span class="out-8"></span>
-
         <hr>
-        
+        <h5>Task 9</h5>
+        <p>Создайте на странице input[type=number] с классом i-9, куда пользователь может ввести номер квартиры. Есть кнопка b-9 которая запускает функцию f9. Функция должна вывести в .out-9 номер подъезда, в котором находится квартира.
+
+            если от 1 до 32 - то вывести цифру 1
+            если от 33 до 43 - то вывести 2
+            если от 44 до 64 - то 3.
+            В противном случае, вывести 0.</p>
+        <input type="number" class="i-9">
+        <button class="b-9"> ok </button>
+        <span class="out-9"></span>
+        <hr>
+        <h5>Task 10</h5>
+        <p>Дан select s-100. По нажатию кнопки, выведите value выбранного option в out-10.</p>
+        <select name="text"  class="s-100">
+            <option value="six">six</option>
+            <option value="seven">seven</option>
+            <option value="eleven">eleven</option>
+            <option value="nine">nine</option>
+        </select>
+        <button class="b-10"> ok </button>
+        <span class="out-10"></span>
+        <hr>
+        <h5>Task 11</h5>
+        <p>Дан select s-110. По изменению состояния select (событие onchange) выведите value выбранного option в out-11.</p>
+        <select name="text"  class="s-110">
+            <option value="six">six</option>
+            <option value="seven">seven</option>
+            <option value="eleven">eleven</option>
+            <option value="nine">nine</option>
+        </select>
+        <span class="out-11"></span>
+        <hr>
+        <h5>Task 12</h5>
+        <p>Дан input i-120. По нажатию кнопки получите значение из input в переменную, а затем выведите в out-12 typeof полученной переменной. Typeof позволяет определить тип данных. Обратите внимание, данная задача уже решена, нужно убрать комментарии и изучить работу.</p>
+        <input  type="text" class="i-120">
+        <button class="b-12"> ok </button>
+        <span class="out-12"></span>
+        <hr>
+        <h5>Task 13</h5>
+        <p>Дан input i-130. В отличие от предыдущего задания - input type number. По нажатию кнопки получите значение из input в переменную, а затем выведите в out-13 typeof полученной переменной. Typeof позволяет определить тип данных. Если вы правильно все сделали - то удивительно, но тип данных будет string! Подумайте почему так?</p>
+        <input  type="number" class="i-130">
+        <button class="b-13"> ok </button>
+        <span class="out-13"></span>
+        <hr>
+        <h5>Task 14</h5>
+        <p>Дан input i-141 и input-142, type=number. Дан select s-143, который содержит две операции - +, -, *, / . Дана кнопка b-14, при нажатии на которую срабатывает функция f14. Функция выводит в out-14 результат операций выбранной в 3-м select к числам введенным в первом и втором input. Например выбрано 1 13 +, нужно вывести результат операции 1+13 т.е. 14.</p>
+        <input  type="number" class="i-141">
+        <input  type="number" class="i-142">
+        <select name="text"  class="s-143">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <button class="b-14"> ok </button>
+        <span class="out-14"></span>
     </div>
     <script src="js/script.js"></script>
 </body>
