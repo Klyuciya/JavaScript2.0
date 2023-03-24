@@ -7,12 +7,12 @@
     }
 
 div {
-    margin-bottom: 30px;
+    margin: 10px, 15px;
 }
 
-.border {
-    border: 2px solid black;
-    padding: 15px 40px;
-    background-color: antiquewhite;
-    width: 500px;
+button {
+    margin-bottom: 10px;
+}
+.columns {
+    column-count: 9;
 }
