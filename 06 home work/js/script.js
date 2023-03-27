@@ -245,3 +245,93 @@ function f11 () {
     out11.innerHTML = str11;
 }
 document.querySelector('.b-11').onclick = f11;
+
+
+// 2
+// С помощью вложенных циклов и символа * нарисуйте:
+//    *****
+//    *****
+//    *****
+
+function f12 () {
+    let out12 = document.querySelector('.out-12');
+    let str12 = '';
+    for (let i = 0; i < 3; i++ ) {
+        for ( let j = 0; j < 5; j++) {
+            str12 += `*`
+        }
+        str12 += `<br>`
+    }
+    out12.innerHTML = str12;
+}
+document.querySelector('.b-12').onclick = f12;
+
+// 3
+// С помощью вложенных циклов и символа * нарисуйте:
+//    *****
+//    ****
+//    ***
+//    **
+//    *
+
+function f13 () {
+    let out13 = document.querySelector('.out-13');
+    let str13 = '';
+    for (let i = 5; i > 0; i-- ) {
+        for ( let j = 0; j < i; j++) {
+            str13 += `*`
+        }
+        str13 += `<br>`
+    }
+    out13.innerHTML = str13;
+}
+document.querySelector('.b-13').onclick = f13;
+
+// 4
+// С помощью вложенных циклов и символа * нарисуйте:
+//      *****
+//     *****
+//    *****
+
+function f14 () {
+    let out14 = document.querySelector('.out-14');
+    let str14 = '';
+    for (let i = 0; i < 3; i++ ) {
+        switch (i) {
+            case 0: 
+                str14 += `&nbsp&nbsp&nbsp&nbsp`;
+                break;
+            case 1:
+                str14 += `&nbsp&nbsp`;
+                break;
+        }
+        for ( let j = 0; j < 5; j++) {
+        str14 += `*`
+        }
+        str14 += `<br>`
+    }
+    out14.innerHTML = str14;
+}
+document.querySelector('.b-14').onclick = f14;
+
+// 5
+// С помощью вложенных циклов и символа * нарисуйте:
+//    *
+//    **
+//    ***
+//    **
+//    *
+
+function f15 () {
+    let out15 = document.querySelector('.out-15');
+    let str15 = '';
+    for (let i = 1; i < 6; i++ ) {
+        for ( let j = 0; j < i; j++) {
+        if ((i == 5 && j > 0) || (i == 4 && j > 1)) break;
+        str15 += `*`
+        }
+        str15 += `<br>`
+    }
+    out15.innerHTML = str15;
+}
+document.querySelector('.b-15').onclick = f15;
