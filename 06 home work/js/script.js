@@ -335,3 +335,72 @@ function f15 () {
     out15.innerHTML = str15;
 }
 document.querySelector('.b-15').onclick = f15;
+
+// 6
+// С помощью вложенных циклов и символа * нарисуйте:
+	// ******
+	// *       *
+	// *       *
+	// *       *
+    // ******
+
+function f16 () {
+    let out16 = document.querySelector('.out-16');
+    let str16 = '';
+    for (let i = 0; i < 5; i++ ) {
+        str16 += `*`
+        for ( let j = 0; j < 4; j++) {
+            if ((i == 0) || (i == 4)) {
+                str16 += `*`;
+            } else
+            str16 += `&nbsp&nbsp&nbsp`;
+        }
+        str16 += `*<br>`
+    }
+    out16.innerHTML = str16;
+}
+document.querySelector('.b-16').onclick = f16;
+        
+// 7
+// С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
+// 5 4 3 2 1
+// 4 3 2 1
+// 3 2 1
+// 2 1
+// 1
+
+function f17 () {
+    let out17 = document.querySelector('.out-17');
+    let str17 = '';
+    for (let i = 0; i < 5; i++ ) {
+        for ( let j = 5; j > i; j--) {
+            str17 += `${j-i} `;
+        }
+        str17 += `<br>`
+    }
+    out17.innerHTML = str17;
+}
+document.querySelector('.b-17').onclick = f17;
+        
+// 8
+// С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
+//         1
+//       2 1
+//     3 2 1
+//   4 3 2 1
+// 5 4 3 2 1
+
+function f18 () {
+    let out18 = document.querySelector('.out-18');
+    const max = 5
+    let str18 = "";
+    for (let i = 1; i <= max; i++ ) {
+        str18 += " ".repeat(max-i)
+        for ( let j = i; j >= 1 ; j--) {
+            str18 += `${j}`;
+        }
+        str18 += "</br>"
+    }
+    out18.innerHTML = str18 ;
+}
+document.querySelector('.b-18').onclick = f18;
