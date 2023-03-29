@@ -395,12 +395,150 @@ function f18 () {
     const max = 5
     let str18 = "";
     for (let i = 1; i <= max; i++ ) {
-        str18 += " ".repeat(max-i)
+        str18 += "  ".repeat(max-i)
         for ( let j = i; j >= 1 ; j--) {
-            str18 += `${j}`;
+            str18 += `${j} `;
         }
         str18 += "</br>"
     }
     out18.innerHTML = str18 ;
 }
 document.querySelector('.b-18').onclick = f18;
+
+// 9
+// С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
+// X X X X 1
+// X X X 2 1
+// X X 3 2 1
+// X 4 3 2 1
+// 5 4 3 2 1
+
+function f19 () {
+    let out19 = document.querySelector('.out-19');
+    const max = 5
+    let str19 = "";
+    for (let i = 1; i <= max; i++ ) {
+        str19 += "X ".repeat(max-i)
+        for ( let j = i; j >= 1 ; j--) {
+            str19 += `${j} `;
+        }
+        str19 += "</br>"
+    }
+    out19.innerHTML = str19 ;
+}
+document.querySelector('.b-19').onclick = f19;
+
+// 10
+// С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла:
+//   1
+//   2  2
+//   3  3  3
+//   4  4  4  4
+//   5  5  5  5  5
+
+function f20 () {
+    let out20 = document.querySelector('.out-20');
+    const max = 5
+    let str20 = "";
+    for (let i = 1; i <= max; i++ ) {
+        for ( let j = i; j >= 1 ; j--) {
+            str20 += `${i} `;
+        }
+        str20 += "</br>"
+    }
+    out20.innerHTML = str20 ;
+}
+document.querySelector('.b-20').onclick = f20;
+
+// 11	
+// С помощью вложенных циклов нарисуйте, цифры - из счетчиков цикла (четные заменены на X):
+//   5
+//   X  X
+//   3  3  3
+//   X  X  X  X
+//   1  1  1  1  1
+
+function f21 () {
+    let out21 = document.querySelector('.out-21');
+    let str21 = "";
+    for (let i = 5; i >= 1; i-- ) {
+        for ( let j = i; j < 6 ; j++) {
+            if (i%2 == 0) {
+                str21 += `X `;
+            } else {
+                str21 += `${i} `;
+            }
+        }
+        str21 += "</br>"
+    }
+    out21.innerHTML = str21 ;
+}
+document.querySelector('.b-21').onclick = f21;
+
+// 12
+// С помощью вложенных циклов и символа * нарисуйте:
+//      *****
+//     *******
+//    *********
+
+function f22 () {
+    let out22 = document.querySelector('.out-22');
+    let str22 = "";
+    let max = 0;
+    for (let i = 0; i < 3; i++ ) {
+        switch (i) {
+            case 0: 
+                str22 += `&nbsp&nbsp`;
+                max = 5;
+                break;
+            case 1:
+                str22 += `&nbsp`;
+                max = 7
+                break;
+            default:
+                max = 9;
+        }
+        for ( let j = 0; j < max  ; j++) {
+            str22 += `*`;
+        }
+        str22 += "</br>"
+    }
+    out22.innerHTML = str22 ;
+}
+document.querySelector('.b-22').onclick = f22;
+
+// 13
+// С помощью вложенных циклов и символа * нарисуйте:
+//      **
+//     ****
+//    ******
+//     ****
+//      **
+
+function f23 () {
+    let out23 = document.querySelector('.out-23');
+    let str23 = "";
+    let max = 0;
+    for (let i = 0; i < 5; i++ ) {
+        switch (i) {
+            case 0: 
+            case 4: 
+                str23 += `&nbsp&nbsp`;
+                max = 2;
+                break;
+            case 1:
+            case 3:
+                str23 += `&nbsp`;
+                max = 4
+                break;
+            default:
+                max = 6;
+        }
+        for ( let j = 0; j < max  ; j++) {
+            str23 += `*`;
+        }
+        str23 += "</br>"
+    }
+    out23.innerHTML = str23 ;
+}
+document.querySelector('.b-23').onclick = f23;

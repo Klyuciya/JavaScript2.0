@@ -8,6 +8,7 @@
 
 div {
     margin: 10px, 15px;
+    font-family: monospace;
 }
 
 button {
@@ -15,4 +16,8 @@ button {
 }
 .columns {
     column-count: 9;
+}
+
+p {
+    font-family: monospace;
 }
