@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>07 home work</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">ФУНКЦИИ И ВСЕ О НИХ - HOME WORK</h1>
+        <h2 class="text-center">курс JavaScript 2.0 </h2>
+        <h5>Task 1</h5>
+        <p>Напишите функцию t1, которая при нажатии кнопки выводит в out-1 переменную a1.
+        <pre class="show-code">
+            let a1 = 8;
+            function t1() {
+            }
+            document.querySelector(‘.b-1’).onclick = t1;</pre></p>
+        <button class="b-1">push</button>
+        <div class="out-1"></div>
+        <hr>
+        <h5>Task 2</h5>
+        <p>Изменим задачу 1. Сейчас она только выводит переменную в заранее заданный блок. Давайте сделаем так, чтобы функция, была более гибкой. Пусть теперь функция t2 возвращает переменную a2. Поскольку функция возвращает переменную, то имя функции со скобками (вызов функции) можно встраивать в выражения. Обратите внимание, как изменился вызов функции.
+        <pre class="show-code">
+            let a2 = 8;
+            function t2() {
+            }
+            document.querySelector(‘.b-2’).onclick =function() { 
+            document.querySelector(‘.out-2’).textContent = f2(); 
+            }</pre></p>
+        <button class="b-2">push</button>
+        <div class="out-2"></div>
+        <hr>
+        <h5>Task 3</h5>
+        <p>Наша предыдущая функция, сильно все еще зависима от внешних переменных. Давайте сделаем ее более универсальной. Пусть функция t3 принимает 2 параметра и выводит их произведение. Допишите код функции так, чтобы она возвращала произведение двух чисел, переданных ей в качестве параметра a, b. Протестируем функцию на двух примерах, с помощью кнопок b3-1 и b3-2.
+        <pre class="show-code">
+            function t3(a,b) {
+
+            }
+            document.querySelector(‘.b-3-1’).onclick =function() {
+                document.querySelector(‘.out-3-1’).textContent = t3(3,4);
+            }
+            document.querySelector(‘.b-3-2’).onclick = function(){
+                document.querySelector(‘.out-3-2’).textContent = t3(5,6);
+            }
+        </pre>
+        </p>
+        <button class="b-3-1">push 1</button>
+        <button class="b-3-2">push 2</button>
+        <div class="out-3-1"></div>
+        <div class="out-3-2"></div>
+        <hr>
+        <h5>Task 4</h5>
+        <p>Напишите функцию t4 которая принимает ваш год рождения и вычисляет ваш возраст.</p>
+        <button class="b-4">push</button>
+        <div class="out-4"></div>
+        <hr>
+        <h5>Task 5</h5>
+        <p>Напишите функцию t5, которая принимает ваше имя в качестве параметра и возвращает строку Hello name, где name - принятое в качестве параметра имя.</p>
+        <button class="b-5">push</button>
+        <div class="out-5"></div>
+        <hr>
+        <h5>Task 6</h5>
+        <p>Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго принятого параметра.</p>
+        <button class="b-6">push</button>
+        <div class="out-6"></div>
+        <hr>
+        <h5>Task 7</h5>
+        <p>Напишите функцию t7, которая возвращает случайный цвет в формате rgb(x,y,z) (строка). Где x,y,z - случайные числа в диапазоне [0, 255].</p>
+        <button class="b-7">push</button>
+        <div class="out-7"></div>
+        <hr>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
