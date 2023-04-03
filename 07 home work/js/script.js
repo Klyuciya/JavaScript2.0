@@ -56,7 +56,8 @@ function t4(year) {
     return 2023 - year;
 }
 document.querySelector('.b-4').onclick = () => {
-    document.querySelector('.out-4').textContent = t4(1989);
+    year = document.querySelector('.i-4').value;
+    document.querySelector('.out-4').textContent = t4(year);
 }
 
 // Task 5
@@ -66,17 +67,20 @@ function t5(name) {
     return `Hello ${name}`;
 }
 document.querySelector('.b-5').onclick = () => {
-    document.querySelector('.out-5').textContent = t5("Liutsiia");
+    yourName = document.querySelector('.i-5').value;
+    document.querySelector('.out-5').textContent = t5(yourName);
 }
 
 // Task 6
 // Напишите функцию t6, которая принимает 2 числа и возвращает случайное целое число от первого до второго принятого параметра.
 
-function t6(min,max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min
+function t6(min, max) {
+    return parseInt(Math.floor(Math.random() * (max - min + 1)) + min);
 }
 document.querySelector('.b-6').onclick = () => {
-    document.querySelector('.out-6').textContent = t6(1, 4);
+    min = document.querySelector('.i-61').value;
+    max = document.querySelector('.i-62').value;
+    document.querySelector('.out-6').textContent = t6(parseInt(min), parseInt(max));
 }
 
 // Task 7
@@ -90,4 +94,44 @@ function t7() {
 }
 document.querySelector('.b-7').onclick = () => {
     document.querySelector('.out-7').textContent = t7();
+}
+
+// Task 8
+// Напишите функцию t8, которая принимает строку в качестве параметра и возвращает результат с очищенными пробелами в начале и вконце строки. Т.е. принимает _hello_ (где знак _ символизирует пробел), а возвращает hello. Для удаления пробелов - используйте trim.
+
+function t8(str) {
+    return str.trim();
+}
+document.querySelector('.b-8').onclick = () => {
+    str= document.querySelector('.i-8').value;
+    document.querySelector('.out-8').textContent = t8(str);
+}
+
+// Task 9
+// Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное.
+
+function t9(n) {
+    if ((n%2) == 0)
+    return  true;
+    else 
+    return false;
+}
+document.querySelector('.b-9').onclick = () => {
+    num = document.querySelector('.i-9').value;
+    document.querySelector('.out-9').textContent = t9(num);
+}
+
+// Task 10
+// Создайте функцию t10, которая принимает 2 числа и возвращает большее из них. В случае равенства - любое из чисел.
+
+function t10(a, b) {
+    if (a >= b )
+    return a
+    else
+    return b
+}
+document.querySelector('.b-10').onclick = () => {
+    a = document.querySelector('.i-101').value;
+    b = document.querySelector('.i-102').value;
+    document.querySelector('.out-10').textContent = t10(parseInt(a), parseInt(b));
 }
