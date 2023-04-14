@@ -48,7 +48,6 @@ document.querySelector('.b-4').onclick = f4;
 
 function f5() {
     let out5 = document.querySelector('.out-5');
-    console.log(out5)
     let out4 = document.querySelector('.out-4');
     if ( out4.classList.contains('bg-4')){
         out5.innerHTML = 'true';
@@ -64,7 +63,9 @@ document.querySelector('.b-5').onclick = f5;
 // По нажатию b-6 запускайте функцию f6, которая выводит в out-6 количество параграфов с классом p-6.
 
 function f6() {
-
+let p6 = document.querySelectorAll('.p-6');
+let out6 = document.querySelector('.out-6');
+out6.innerHTML = p6.length;
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -74,9 +75,10 @@ document.querySelector('.b-6').onclick = f6;
 // По нажатию кнопки b-7 запускайте функцию f7, которая присваивает блокам out-7 класс .bg-7. Обратите внимание, что данных блоков больше одного, следовательно нужен цикл.
 
 let blocks7 = document.querySelectorAll('.out-7');
-
 function f7() {
-    //внутри цикла blocks7[i].classList....
+    for ( let i = 0; i < blocks7.length; i++) {
+        blocks7[i].classList.add('bg-7')
+    }
 }
 
 document.querySelector('.b-7').onclick = f7;
@@ -88,7 +90,9 @@ document.querySelector('.b-7').onclick = f7;
 let blocks8 = document.querySelectorAll('.out-8');
 
 function f8() {
-    //внутри цикла blocks8[i].classList....
+    for ( let i = 0; i < blocks8.length; i++){
+        blocks8[i].classList.toggle('bg-8')
+    }
 }
 
 document.querySelector('.b-8').onclick = f8;
@@ -98,7 +102,7 @@ document.querySelector('.b-8').onclick = f8;
 // Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-9 событие клик. По клику должна выполняться функция f9. Функция, должна добавлять класс bg-9 тому out-9 на котором кликнули.
 
 function f9() {
-    //this.classList...  // все решается одной строкой
+    this.classList.add('bg-9')
 }
 
 let div9 = document.querySelectorAll('.out-9');
@@ -111,22 +115,23 @@ for (let i = 0; i < div9.length; i++) {
 //  Task 10
 // Усложним предыдущие задачи. С помощью цикла повесьте на блоки out-10 событие клик. По клику должна выполняться функция f10. Функция, должна делать toggle класса bg-10 тому out-10 на котором кликнули.
 
-//let div10 = тут получите все out-10
-
 function f10() {
-
+    this.classList.toggle('bg-10');
 }
-
-// а тут цикл, похожий на предыдущее задание
-
-
+ 
+let out10 = document.querySelectorAll('.out-10');
+for ( let i = 0; i < out10.length; i++) {
+    out10[i].onclick = f10;
+}
 
 //  Task 11
 // Добавьте кнопку .b-11, которая запускает функцию f11. Функция создает через createElement div c текстом 25 и добавляет его через append в out-11.
 
 
 function f11() {
-
+ let div11 = document.createElement('div');
+ div11.innerHTML = 25;
+ document.querySelector('.out-11').append(div11);
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -136,7 +141,10 @@ document.querySelector('.b-11').onclick = f11;
 
 
 function f12() {
-
+let div12  = document.createElement('div');
+div12.innerHTML = 12;
+div12.classList.add('bg-12')
+document.querySelector('.out-12').append(div12)
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -145,13 +153,16 @@ document.querySelector('.b-12').onclick = f12;
 // Добавьте кнопку .b-13, которая запускает функцию f13. Функция создает через createElement div c текстом pushMe и добавляет ему класс bg-13. Также, созданному div добавляется событие onclick, по которому выполняется функция f13_1. Созданный div добавляется в out-13.
 
 function f13() {
-
+    let div13 = document.createElement('div');
+    div13.innerHTML = 'pushMe';
+    div13.classList.add('bg-13');
+    document.querySelector('.out-13').append(div13)
+    div13.onclick  = f13_1;
 }
 
 function f13_1() {
     document.querySelector('.out-13-1').innerHTML += this.innerHTML;
 }
-
 
 document.querySelector('.b-13').onclick = f13;
 
@@ -160,7 +171,10 @@ document.querySelector('.b-13').onclick = f13;
 
 
 function f14() {
-
+    let div14 = document.createElement('div');
+    div14.innerHTML = 14;
+    div14.classList.add('bg-14');
+    document.querySelector('.out-14').prepend(div14)
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -169,7 +183,10 @@ document.querySelector('.b-14').onclick = f14;
 // Добавьте кнопку .b-15, которая запускает функцию f15. Функция создает через createElement div c текстом 15 и добавляет ему класс bg-15. Созданный div добавляется в out-15 с помощью before.
 
 function f15() {
-
+    let div15 = document.createElement('div');
+    div15.innerHTML = 15;
+    div15.classList.add('bg-15');
+    document.querySelector('.out-15').before(div15)
 }
 
 document.querySelector('.b-15').onclick = f15;
