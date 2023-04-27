@@ -221,9 +221,12 @@ document.querySelector('.b-12').onclick = f12;
 
 
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
-
 function f13() {
-
+    let out = "";
+    for( let i = 0;  i < ar13.length; i++){
+        out += i + " " + ar13[i] + " "
+    }
+    document.querySelector('.out-13').innerHTML = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -238,7 +241,11 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
-
+    let out = '';
+    for ( i = ar14.length-1; i >= 0; i--) {
+        out += ar14[i] + ' ';
+    }
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -252,6 +259,13 @@ document.querySelector('.b-14').onclick = f14;
 let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
+    let out = '';
+    for ( let i = 0;  i < ar15.length; i++) {
+        if (ar15[i] > 0) {
+            out += ar15[i] + ' ';
+        }
+    }
+document.querySelector('.out-15').innerHTML = out;
 
 }
 
@@ -268,7 +282,23 @@ let ar16_odd = [];
 let ar16_even = [];
 
 function f16() {
-
+    for (let i = 0; i < ar16.length; i++) {
+        if ( ar16[i] % 2 == 0) { 
+            ar16_even[ar16_even.length] = ar16[i];
+        } else {
+            ar16_odd[ar16_odd.length] = ar16[i];
+        }
+    }
+    let out_odd = '';
+    for ( let i = 0 ; i < ar16_odd.length; i++){
+        out_odd += ar16_odd[i] + " ";
+    }
+    let out_even  = " "
+    for ( let i = 0; i < ar16_even.length; i++){
+        out_even += ar16_even[i] + ' ';
+    }
+    document.querySelector('.out-16-odd').innerHTML = out_odd;
+    document.querySelector('.out-16-even').innerHTML = out_even;
 }
 
 document.querySelector('.b-16').onclick = f16;
