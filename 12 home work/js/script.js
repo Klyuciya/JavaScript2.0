@@ -226,6 +226,17 @@ let a13 = [];
 
 function f13() {
 
+  for( let i = 0; i < 8; i ++) { 
+      a13[i] =[];
+      for ( let k = 0; k < 8; k++) {
+          if ((( i % 2 == 0) && (k % 2 != 0)) || (( i % 2 != 0) && (k % 2 == 0))) {
+             a13[i][k] = 1;
+          } else {
+             a13[i][k] = 0;
+          }
+      }
+  }
+  console.log (a13);
 }
 
 document.querySelector('.b-13').onclick = f13;
